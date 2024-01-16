@@ -4,7 +4,11 @@
 	"private": true,
 	"author": "Birdie0",
 	"license": "MIT",
+	"scripts": {
+		"lint": "prettier scripts/ -w"
+	},
 	"devDependencies": {
-		"@types/tampermonkey": "^5.0.2"
+		"@types/tampermonkey": "^5.0.2",
+		"prettier": "^3.1.1"
 	}
 }

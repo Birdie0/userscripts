@@ -8,9 +8,18 @@ devDependencies:
   '@types/tampermonkey':
     specifier: ^5.0.2
     version: 5.0.2
+  prettier:
+    specifier: ^3.1.1
+    version: 3.1.1
 
 packages:
 
   /@types/tampermonkey@5.0.2:
     resolution: {integrity: sha512-keKnYemqWts68wO2+TBdEg84iQd5vymK5SEQGxitI9uOfOnjm/ZskBoK9ZH3mnSYp79HidZMA/Y7ODQtiA/VIg==}
+    dev: true
+
+  /prettier@3.1.1:
+    resolution: {integrity: sha512-22UbSzg8luF4UuZtzgiUOfcGM8s4tjBv6dJRT7j275NXsy2jb4aJa4NNveul5x4eqlF1wuhuR2RElK71RvmVaw==}
+    engines: {node: '>=14'}
+    hasBin: true
     dev: true

@@ -1,21 +1,23 @@
 // ==UserScript==
-// @name          Selection to TTS
-// @namespace     github.com/Birdie0/userscripts
-// @version       1.0.0
-// @description   Press Alt+Z to read selected text with TTS
-// @author        Birdie0
+// @name         Selection to TTS
+// @namespace    github.com/Birdie0/userscripts
+// @version      1.0.0
+// @description  Press Alt+Z to read selected text with TTS
+// @author       Birdie0
 //
-// @homepageURL   https://github.com/Birdie0/userscripts
-// @supportURL    https://github.com/Birdie0/userscripts/issues
-// @updateURL     https://raw.githubusercontent.com/Birdie0/userscripts/master/scripts/tts.user.js
+// @homepageURL  https://github.com/Birdie0/userscripts
+// @homepage     https://github.com/Birdie0/userscripts
+// @supportURL   https://github.com/Birdie0/userscripts/issues
+// @updateURL    https://raw.githubusercontent.com/Birdie0/userscripts/master/scripts/tts.user.js
+// @downloadURL  https://raw.githubusercontent.com/Birdie0/userscripts/master/scripts/tts.user.js
 //
-// @match         *://*/*
+// @match        *://*/*
 // @noframes
 //
-// @require       https://cdn.jsdelivr.net/npm/@violentmonkey/shortcut@1
-// @grant         GM.getValue
-// @grant         GM.setValue
-// @grant         GM.registerMenuCommand
+// @require      https://cdn.jsdelivr.net/npm/@violentmonkey/shortcut@1
+// @grant        GM.getValue
+// @grant        GM.setValue
+// @grant        GM.registerMenuCommand
 // ==/UserScript==
 
 // speech config

@@ -1,17 +1,19 @@
 // ==UserScript==
-// @name          Steam - Search gameplay video
-// @namespace     github.com/Birdie0/userscripts
-// @version       1.0.0
-// @description   Add 'Check on YouTube' button to game page on Steam to quickly search gameplay video on YouTube
-// @author        Birdie0
+// @name         Steam - Search gameplay video
+// @namespace    github.com/Birdie0/userscripts
+// @version      1.0.0
+// @description  Add 'Check on YouTube' button to game page on Steam to quickly search gameplay video on YouTube
+// @author       Birdie0
 //
-// @homepageURL   https://github.com/Birdie0/userscripts
-// @supportURL    https://github.com/Birdie0/userscripts/issues
-// @updateURL     https://raw.githubusercontent.com/Birdie0/userscripts/master/scripts/steam.user.js
+// @homepageURL  https://github.com/Birdie0/userscripts
+// @homepage     https://github.com/Birdie0/userscripts
+// @supportURL   https://github.com/Birdie0/userscripts/issues
+// @updateURL    https://raw.githubusercontent.com/Birdie0/userscripts/master/scripts/steam.user.js
+// @downloadURL  https://raw.githubusercontent.com/Birdie0/userscripts/master/scripts/steam.user.js
 //
-// @match         https://store.steampowered.com/app/*
+// @match        https://store.steampowered.com/app/*
 //
-// @grant         GM.openInTab
+// @grant        GM.openInTab
 // ==/UserScript==
 
 const button = document.createElement('button')

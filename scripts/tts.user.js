@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Selection to TTS
 // @namespace    github.com/Birdie0/userscripts
-// @version      1.0.0
+// @version      1.0.1
 // @description  Press Alt+Z to read selected text with TTS
 // @author       Birdie0
 //
@@ -46,7 +46,7 @@ GM.registerMenuCommand('config TTS Voice', async () => {
 	)
 
 	// tts voice
-	const voices = window.speechSynthesis.getVoices()
+	const voices = await getVoices()
 	const voicesList = voices.map((voice) => `- ${voice.name}`).join('\n')
 	console.log(voicesList)
 
@@ -66,7 +66,7 @@ GM.registerMenuCommand('config TTS Voice', async () => {
 })
 
 // read text selection aloud
-VM.shortcut.register('a-z', async () => {
+VM.shortcut.register('keyC keyC', async () => {
 	const selection = document.getSelection()
 	const text = selection?.toString()
 	if (!text) return
@@ -90,12 +90,29 @@ async function selectVoice() {
 	const ttsVoice = await GM.getValue('tts_voice')
 	if (!ttsVoice) return
 
-	const voice = window.speechSynthesis.getVoices().find((voice) => voice.name == ttsVoice)
+	const voice = (await getVoices()).find((voice) => voice.name == ttsVoice)
 	return voice
 }
 
-// helper method
+// helper methods
 
 function join(...str) {
 	return str.join('\n')
+}
+
+async function sleep(ms) {
+	return new Promise((r) => setTimeout(r, ms))
+}
+
+async function getVoices(maxTries = 10) {
+	let tries = 0
+	let arr = window.speechSynthesis.getVoices()
+	while (arr.length === 0) {
+		if (tries === maxTries) break
+		console.count()
+		await sleep(500)
+		arr = window.speechSynthesis.getVoices()
+		++tries
+	}
+	return arr
 }

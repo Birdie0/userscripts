@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         Selection to TTS
 // @namespace    github.com/Birdie0/userscripts
-// @version      1.0.1
-// @description  Press Alt+Z to read selected text with TTS
+// @version      1.0.2
+// @description  Press C twice to read selected text with TTS
 // @author       Birdie0
 //
 // @homepageURL  https://github.com/Birdie0/userscripts
